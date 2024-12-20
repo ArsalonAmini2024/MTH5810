@@ -3,15 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
-# Load the Excel file
-file_path = "/Users/arsalonamini/Desktop/w_15_gd/multi_feature_dataset_100_samples.csv" 
-data = pd.read_csv(file_path, header=None)
-print("Excel file loaded successfully.")
-
-data.columns = ["Square Footage", "Number of Bedrooms", "Age of House", "House Price"]
-data.info()
-print(data.head())
-
 
 def compute_cost(X, y, theta):
     """
@@ -62,7 +53,7 @@ def gradient_descent(X, y, theta, alpha, num_iters):
 
 def main():
     
-    file_path = "/Users/arsalonamini/Desktop/w_15_gd/multi_feature_dataset_100_samples.csv"
+    file_path = "/Users/arsalonamini/Desktop/MTH5810/multi_feature_dataset_100_samples.csv"
     data = pd.read_csv(file_path, header=None)
     print("Excel file loaded successfully.")
     
@@ -101,6 +92,7 @@ def main():
     plt.grid(True)
     plt.show()
     
+    print("About to plot alpha experiments...")
     # Experimentation: Try different learning rates
     for test_alpha in [1e-9, 1e-8, 1e-7]:
         test_theta = np.zeros(X_b.shape[1])
