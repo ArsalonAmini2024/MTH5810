@@ -18,7 +18,7 @@ def compute_cost(X, y, theta):
     Returns:
         float: The mean squared error cost.
     """
-    m = len(y)  # number of training examples
+    m = len(y)  
     predictions = X.dot(theta)
     sq_errors = (predictions - y) ** 2
     cost = (1 / (2 * m)) * np.sum(sq_errors)
